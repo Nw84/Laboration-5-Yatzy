@@ -18,11 +18,11 @@ public class YatziMain {
 
         while(turn <= 3) {
             System.out.println("Starting turn " + (turn) + " of 3, rolling dice.");
-            game.rollDies(ds);
-            if(game.checkResult(ds)) {
-                System.out.println("You got YATZI! in " + ds[0].value + "'s");
-                return;  
-            } else if (turn == 3){
+            boolean result = game.rollDies(ds);
+            if(result){
+                return; 
+            }
+            else if (turn == 3){
                 System.out.println("Game over! Want to play again?");  
                         if(scanner.next().equals("y")) {
                             turn = 1;

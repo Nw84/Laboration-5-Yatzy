@@ -9,26 +9,21 @@ public class YatziTest {
     public static Die[] d;
     @Test
     void isYatziWhenAllDiceMatches() {
-        d = new Die[5];
-        Arrays.fill(d, new Die());
-        for (int i = 0; i < d.length; i++) {
-            d[i].value = 6;
-        }
+        int [] array = new int[5];
+        Arrays.fill(array, 5);
 
         BoardGameMaterial game = new BoardGameMaterial();
-        assertTrue(game.checkResult(d)); 
+        assertTrue(game.checkResult(array)); 
     }
 
     @Test
     void isNotYatziWhenOneDieIsNotMatchingTheOther() {
-        Die[] dice = new Die[5];
-        Arrays.fill(dice, new Die());
-        for(Die die: dice) {
-            die.value = (int)(Math.random()*4+1);
+        int [] array = new int[5];
+        for (int i = 0; i < array.length; i++) {
+            array[i] = i; 
         }
-        dice[0].value = 1;
         
         BoardGameMaterial game = new BoardGameMaterial();
-        assertFalse(game.checkResult(dice)); 
+        assertFalse(game.checkResult(array));
     }
 }
