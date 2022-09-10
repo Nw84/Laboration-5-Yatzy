@@ -6,11 +6,10 @@ public class YatziMain {
     
     public static void main(String[] args) {
         int turn = 1;
-     
         BoardGameHandler game = new BoardGameHandler();
         System.out.println("Welcome to Yatzi!");
         Scanner scanner = new Scanner(System.in);
-
+    
         while(turn <= 3) {
             System.out.println("Starting turn " + (turn) + " of 3, rolling dice.");
             boolean yatzy = game.rollDice();

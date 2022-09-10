@@ -11,11 +11,11 @@ public class BoardGameHandler {
             dice[i].DieRoll();
             System.out.println(i+1 + ": " + dice[i].getString());
         }
-        boolean result = checkResult(dice);  
+        boolean result = checkForYatzy(dice);  
         return result; 
     }
 
-    public boolean checkResult(Die [] result) {
+    public boolean checkForYatzy(Die [] result) {
         boolean isYatzy = true;
                 for(int i = 1; i < result.length; i++) {
                     if(result[i].value != result[0].value) {

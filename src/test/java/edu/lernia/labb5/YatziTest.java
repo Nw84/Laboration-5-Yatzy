@@ -15,7 +15,7 @@ public class YatziTest {
         }
 
         BoardGameHandler game = new BoardGameHandler();
-        assertTrue(game.checkResult(dice)); 
+        assertTrue(game.checkForYatzy(dice)); 
     }
 
     @Test
@@ -27,6 +27,6 @@ public class YatziTest {
         }
         
         BoardGameHandler game = new BoardGameHandler();
-        assertFalse(game.checkResult(dice));
+        assertFalse(game.checkForYatzy(dice));
     }
 }
