@@ -1,6 +1,5 @@
 package edu.lernia.labb5;
 
-import java.util.Arrays;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -10,8 +9,9 @@ public class YatziTest {
     @Test
     void isYatziWhenAllDiceMatches() {
         Die[] dice = new Die[5];
-        for(Die die: dice) {
-            die.value = 6;
+        for (int i = 0; i < dice.length; i++) {
+            dice[i] = new Die();
+            dice[i].value = 6; 
         }
 
         BoardGameMaterial game = new BoardGameMaterial();
@@ -20,12 +20,13 @@ public class YatziTest {
 
     @Test
     void isNotYatziWhenOneDieIsNotMatchingTheOther() {
-        int [] array = new int[5];
-        for (int i = 0; i < array.length; i++) {
-            array[i] = i; 
+        Die[] dice = new Die[5];
+        for (int i = 0; i < dice.length; i++) {
+            dice[i] = new Die();
+            dice[i].value = i; 
         }
         
         BoardGameMaterial game = new BoardGameMaterial();
-        
+        assertFalse(game.checkResult(dice));
     }
 }

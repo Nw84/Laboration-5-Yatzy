@@ -1,0 +1,5 @@
+Laboration 5: Yatzy
+
+Created by Tobias Nordwall
+
+The goal of the exercise was to familiarize yourself with Clean code and refactor existing code from our teacher, to make it more readable and easy to understand. 

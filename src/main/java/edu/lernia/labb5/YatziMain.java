@@ -13,7 +13,7 @@ public class YatziMain {
 
         while(turn <= 3) {
             System.out.println("Starting turn " + (turn) + " of 3, rolling dice.");
-            boolean result = game.rollDies();
+            boolean result = game.rollDice();
             if(result){
                 return; 
             }

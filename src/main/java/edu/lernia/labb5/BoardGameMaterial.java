@@ -2,16 +2,16 @@ package edu.lernia.labb5;
 
 public class BoardGameMaterial {
     /* Will be used to store all boardgamematerials in one class */
-    public static Die[] ds;
+    public static Die[] dice;
     
-    public boolean rollDies() {
-        ds = new Die[5];
-        for (int i = 0; i < ds.length; i++) {
-            ds[i] = new Die();
-            ds[i].DieRoll();
-            System.out.println(i+1 + ": " + ds[i].getString());
+    public boolean rollDice() {
+        dice = new Die[5];
+        for (int i = 0; i < dice.length; i++) {
+            dice[i] = new Die();
+            dice[i].DieRoll();
+            System.out.println(i+1 + ": " + dice[i].getString());
         }
-        boolean result = checkResult(ds);  
+        boolean result = checkResult(dice);  
         return result; 
     }
 
