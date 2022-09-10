@@ -4,7 +4,7 @@ public class BoardGameHandler {
     /* Will be used to store all boardgamematerials and handle the rules */
     public static Dice[] dice;
     
-    public boolean rollDice() {
+    public boolean rollAllDice() {
         dice = new Dice[5];
         for (int i = 0; i < dice.length; i++) {
             dice[i] = new Dice();
