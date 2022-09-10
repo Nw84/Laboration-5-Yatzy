@@ -18,11 +18,11 @@ public class BoardGameHandler {
     public boolean checkForYatzy(Die [] result) {
         boolean isYatzy = true;
                 for(int i = 1; i < result.length; i++) {
-                    if(result[i].value != result[0].value) {
+                    if(result[i].getValue() != result[0].getValue()) {
                         isYatzy = false;
                     }
                 } if(isYatzy) {
-                    System.out.println("You got YATZI! in " + result[0].value + "'s");
+                    System.out.println("You got YATZI! in " + result[0].getValue() + "'s");
                 }
                 return isYatzy;
     }

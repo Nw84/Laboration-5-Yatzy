@@ -11,7 +11,7 @@ public class YatziTest {
         Die[] dice = new Die[5];
         for (int i = 0; i < dice.length; i++) {
             dice[i] = new Die();
-            dice[i].value = 6; 
+            dice[i].setValue(6);
         }
 
         BoardGameHandler game = new BoardGameHandler();
@@ -23,7 +23,7 @@ public class YatziTest {
         Die[] dice = new Die[5];
         for (int i = 0; i < dice.length; i++) {
             dice[i] = new Die();
-            dice[i].value = i; 
+            dice[i].setValue(i);
         }
         
         BoardGameHandler game = new BoardGameHandler();
