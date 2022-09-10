@@ -5,13 +5,13 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class YatziTest {
-    public static Die[] d;
+    public static Dice[] d;
     @Test
     void isYatziWhenAllDiceMatches() {
-        Die[] dice = new Die[5];
+        Dice[] dice = new Dice[5];
         for (int i = 0; i < dice.length; i++) {
-            dice[i] = new Die();
-            dice[i].setValue(6);
+            dice[i] = new Dice();
+            dice[i].SetDiceValue(6);
         }
 
         BoardGameHandler game = new BoardGameHandler();
@@ -20,10 +20,10 @@ public class YatziTest {
 
     @Test
     void isNotYatziWhenOneDieIsNotMatchingTheOther() {
-        Die[] dice = new Die[5];
+        Dice[] dice = new Dice[5];
         for (int i = 0; i < dice.length; i++) {
-            dice[i] = new Die();
-            dice[i].setValue(i);
+            dice[i] = new Dice();
+            dice[i].SetDiceValue(i);
         }
         
         BoardGameHandler game = new BoardGameHandler();
