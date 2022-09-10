@@ -1,16 +1,11 @@
 package edu.lernia.labb5;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class YatziMain {
-    public static Die[] ds;
-    public static boolean bGameIsOn = true;
-
+    
     public static void main(String[] args) {
         int turn = 1;
-        ds = new Die[5];
-        Arrays.fill(ds, new Die());
      
         BoardGameMaterial game = new BoardGameMaterial();
         System.out.println("Welcome to Yatzi!");
@@ -18,7 +13,7 @@ public class YatziMain {
 
         while(turn <= 3) {
             System.out.println("Starting turn " + (turn) + " of 3, rolling dice.");
-            boolean result = game.rollDies(ds);
+            boolean result = game.rollDies();
             if(result){
                 return; 
             }
