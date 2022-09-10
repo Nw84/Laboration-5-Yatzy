@@ -14,7 +14,7 @@ public class YatziTest {
             dice[i].value = 6; 
         }
 
-        BoardGameMaterial game = new BoardGameMaterial();
+        BoardGameHandler game = new BoardGameHandler();
         assertTrue(game.checkResult(dice)); 
     }
 
@@ -26,7 +26,7 @@ public class YatziTest {
             dice[i].value = i; 
         }
         
-        BoardGameMaterial game = new BoardGameMaterial();
+        BoardGameHandler game = new BoardGameHandler();
         assertFalse(game.checkResult(dice));
     }
 }

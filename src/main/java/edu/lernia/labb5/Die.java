@@ -1,6 +1,6 @@
 package edu.lernia.labb5;
 
-public class Die extends BoardGameMaterial {
+public class Die extends BoardGameHandler {
     public int value;
 
     public Die() {
@@ -10,10 +10,6 @@ public class Die extends BoardGameMaterial {
     public int DieRoll() {
         value = (int)(Math.random()*6+1);
         return value;
-    }
-
-    public int DieReroll() {
-        return DieRoll();
     }
 
     public String getString() {

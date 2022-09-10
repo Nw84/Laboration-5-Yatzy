@@ -7,14 +7,14 @@ public class YatziMain {
     public static void main(String[] args) {
         int turn = 1;
      
-        BoardGameMaterial game = new BoardGameMaterial();
+        BoardGameHandler game = new BoardGameHandler();
         System.out.println("Welcome to Yatzi!");
         Scanner scanner = new Scanner(System.in);
 
         while(turn <= 3) {
             System.out.println("Starting turn " + (turn) + " of 3, rolling dice.");
-            boolean result = game.rollDice();
-            if(result){
+            boolean yatzy = game.rollDice();
+            if(yatzy){
                 return; 
             }
             else if (turn == 3){

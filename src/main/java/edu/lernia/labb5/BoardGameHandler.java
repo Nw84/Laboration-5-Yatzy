@@ -1,7 +1,7 @@
-package edu.lernia.labb5;
+package edu.lernia.labb5;  
 
-public class BoardGameMaterial {
-    /* Will be used to store all boardgamematerials in one class */
+public class BoardGameHandler {
+    /* Will be used to store all boardgamematerials and handle the rules */
     public static Die[] dice;
     
     public boolean rollDice() {
@@ -22,7 +22,7 @@ public class BoardGameMaterial {
                         isYatzy = false;
                     }
                 } if(isYatzy) {
-                    System.out.println("You got YATZI! in " + result[0].getString() + "'s");
+                    System.out.println("You got YATZI! in " + result[0].value + "'s");
                 }
                 return isYatzy;
     }
