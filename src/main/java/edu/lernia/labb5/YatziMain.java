@@ -12,8 +12,7 @@ public class YatziMain {
     
         while(turn <= 3) {
             System.out.println("Starting turn " + (turn) + " of 3, rolling dice.");
-            boolean yatzy = game.rollAllDice();
-            if(yatzy){
+            if(game.rollAllDice()){
                 return; 
             }
             else if (turn == 3){

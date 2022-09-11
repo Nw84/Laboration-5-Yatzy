@@ -11,8 +11,7 @@ public class BoardGameHandler {
             dice[i].DiceRoll();
             System.out.println(i+1 + ": " + dice[i].getString());
         }
-        boolean result = checkForYatzy(dice);  
-        return result; 
+        return checkForYatzy(dice);
     }
 
     public boolean checkForYatzy(Dice [] result) {
