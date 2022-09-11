@@ -32,5 +32,6 @@ public class YatziMain {
                 }
             }
         } 
+        scanner.close();
     }
 }
