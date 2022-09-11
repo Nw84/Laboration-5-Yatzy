@@ -19,7 +19,7 @@ public class YatziTest {
     }
 
     @Test
-    void isNotYatziWhenOneDieIsNotMatchingTheOther() {
+    void isNotYatziWhenOneDiceIsNotMatchingTheOther() {
         Dice[] dice = new Dice[5];
         for (int i = 0; i < dice.length; i++) {
             dice[i] = new Dice();
@@ -28,5 +28,12 @@ public class YatziTest {
         
         BoardGameHandler game = new BoardGameHandler();
         assertFalse(game.checkForYatzy(dice));
+    }
+
+    @Test
+    void diceGetStringReturnsExpectedString() {
+        Dice dice = new Dice();
+        dice.SetDiceValue(5);
+        assertEquals("Dice shows 5", dice.getString());
     }
 }
